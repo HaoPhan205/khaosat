@@ -36,10 +36,10 @@ export default function SurveyForm() {
 
     const normalized = normalizeVietnamese(trimmed);
 
-    // Chứa "Thư" hoặc "Bảo Thư" (bỏ dấu, không phân biệt hoa/thường) → redirect
+    // Chứa "Thư" hoặc "Bảo Thư" (bỏ dấu, không phân biệt hoa/thường) → trang khảo sát
     if (normalized.includes("thu") || normalized.includes("bao thu")) {
       setError("");
-      router.push("/chuc-mung");
+      router.push("/khao-sat");
       return;
     }
 
