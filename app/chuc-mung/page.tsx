@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import WishDisplay from "@/components/WishDisplay";
 import FallingFlowers from "@/components/FallingFlowers";
+import MusicPlayer from "@/components/MusicPlayer";
 import dynamic from "next/dynamic";
 
 const ConfettiEffect = dynamic(() => import("@/components/ConfettiEffect"), {
@@ -99,6 +100,8 @@ export default function ChucMungPage() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <MusicPlayer src="/assets/0308.WAV" />
     </div>
   );
 }
